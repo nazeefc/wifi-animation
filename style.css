@@ -1,0 +1,107 @@
+/** @format */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(0, 0, 0);
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+.c1 {
+  width: 0px;
+  height: 0px;
+
+  border-top: 10px solid black;
+  border-right: 10px solid rgb(0, 0, 0);
+  border-bottom: 10px solid rgb(0, 0, 0);
+  border-left: 10px solid rgb(0, 0, 0);
+  border-radius: 50%;
+
+  animation: cl1 3s 2s infinite;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+.c1::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+
+  border-top: 20px solid black;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid transparent;
+
+  border-radius: 50%;
+
+  position: absolute;
+  top: -35px;
+  left: -40px;
+
+  animation: cl2 3s 2s infinite;
+}
+.c2 {
+  width: 130px;
+  height: 130px;
+
+  border-top: 20px solid black;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid transparent;
+  border-radius: 50%;
+
+  animation: cl3 3s 2s infinite;
+
+  position: absolute;
+}
+.c2::before {
+  content: "";
+
+  width: 160px;
+  height: 160px;
+
+  border-top: 20px solid black;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid transparent;
+  border-radius: 50%;
+
+  position: absolute;
+  top: -50px;
+  left: -54px;
+
+  animation: cl4 3s 2s infinite;
+}
+
+@keyframes cl1 {
+  0% {
+    border-color: #00fa9a;
+  }
+}
+@keyframes cl2 {
+  20% {
+    border-top-color: #00fa9a;
+  }
+}
+@keyframes cl3 {
+  40% {
+    border-top-color: #00fa9a;
+  }
+}
+@keyframes cl4 {
+  60% {
+    border-top-color: #00fa9a;
+  }
+}
